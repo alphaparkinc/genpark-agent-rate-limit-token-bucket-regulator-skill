@@ -1,0 +1,32 @@
+{
+  "name": "genpark-agent-rate-limit-token-bucket-regulator-skill",
+  "version": "1.0.0",
+  "description": "Multi-provider token-bucket and sliding-window rate limiter preventing TPM/RPM throttling across LLM APIs with predictive token consumption budgeting.",
+  "category": "Service",
+  "author": "AlphaPark",
+  "tags": [
+    "rate-limiter",
+    "token-bucket",
+    "tpm-throttle",
+    "concurrency-control",
+    "mcp"
+  ],
+  "tools": [
+    {
+      "name": "configure_provider",
+      "description": "Configure rate limit quotas for LLM provider pool."
+    },
+    {
+      "name": "acquire_tokens",
+      "description": "Request token reservation using leaky token bucket algorithm."
+    },
+    {
+      "name": "get_provider_status",
+      "description": "Get real-time token saturation, available capacity, and cooldown time."
+    },
+    {
+      "name": "run_rate_limiter_benchmark",
+      "description": "Run token bucket regulator benchmark."
+    }
+  ]
+}
